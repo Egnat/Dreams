@@ -225,8 +225,14 @@ wrapper {
   gap: 18px;
   idth: auto; }
 
-.list.nav-desctop-list-four {
-  display: none; }
+.nav-desctop-list-four {
+  display: none;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out; }
+
+.listOpen {
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out; }
 
 .list-item {
   margin-bottom: 18p;

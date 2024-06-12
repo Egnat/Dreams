@@ -154,6 +154,7 @@ wrapper {
     justify-content: space-between;
     align-items: flex-start;
     gap: 0 200px;
+    //transition: transform 500ms ease-in-out;
 }
 
 .close {
@@ -211,8 +212,13 @@ wrapper {
    idth: auto;
 }
 
-.list.nav-desctop-list-four {
+.nav-desctop-list-four {
    display: none;
+   transition: all 500ms ease-out;
+}
+
+.listOpen {
+    transition: all 500ms ease-out; 
 }
 
 .list-item {

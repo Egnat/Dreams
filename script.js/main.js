@@ -4,7 +4,7 @@ const menuClose = document.querySelector('.close');
 const menuNav = document.querySelector('.header-nav-desctop');//mobile
 //const bg = document.querySelector('body');*/
 
-//smoothScroll.init();
+//smoothScroll.init();отношение к появлению блока не имеет
 
 //Добавление 4 -го юла при нажатии на три точки, код из чата. Расширение nav
 const menuBtn = document.querySelector('.burger');
@@ -14,20 +14,25 @@ const menuNavMob = document.querySelector('.header-nav-mobile');
 const listOpen = document.querySelector('.nav-desctop-list-four');
 //const bg = document.querySelector('body');
 
+//ОСНОВНОЙ РАБОЧИЙ
 let isOpen = false;
 menuBtn.addEventListener('click', () => {
   isOpen = !isOpen;
   if(isOpen) {
+    //listOpen.classList.toggle('open');
     listOpen.classList.toggle('nav-desctop-list-four-open');//можно toggle вместо add 
     listOpen.style.display = 'flex'; 
-    //menuNav.style.gap = '150px';
+    //listOpen.style.opacity = '1'; 
   } else {  
+    //listOpen.classList.remove('open');
     listOpen.classList.remove('nav-desctop-list-four-open');
     listOpen.style.display = 'none';
-    //menuNav.style.gap = '267px';
+    //listOpen.style.opacity = '0'; 
   }
-  //alert('hi');
+  //alert('hi')
 });
+
+//listOpen.classList.add('animate__animated', 'animate__fadeIn');
 
 //Появление и исчезновение header-nav-mobile
 menuBtn.addEventListener('click', () => {
