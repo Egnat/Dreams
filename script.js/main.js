@@ -51,7 +51,8 @@ const clonedBlock = addTo.cloneNode(true);
 
 // Добавить клон в item-under-block-2
 itemUnderBlock2.appendChild(clonedBlock);
-//itemUnderBlock2.insertBefore(addTo, itemUnderBlock2.firstChild);
+/*В бэйз сцсс на медиа 2.560пх прописал дисплей нон blocк-2 addTo. 
+Посавил его в середину блока изменив ордер элементам. Больше описано в бэйз.сцсс*/
 ///////////////////////////////////////////////
 
 /*//Перестановка элементов, пока не работает
