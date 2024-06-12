@@ -63,12 +63,13 @@ section {
   то штмл и боди показываются на половину
   } */
 
+
 html {
   box-sizing: border-box;  
   min-width: 1300p;
-  /*box-sizing: border-box;это в этом проекте писать может и не нужно*/
   scroll-behavior: smooth;
-  transition: scroll 5000ms ease-in-out;// пока не работает
+  transition: transform 100000ms;
+  //overflow-behavior: contain; 
 }
 
 *, *::before, *::after { /*https://www.youtube.com/watch?v=AvMusILfIdQ&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=2*/
@@ -98,6 +99,8 @@ body {
   /*ВЗЯЛ ЛИНАР ДЛЯ ТЕКСТА И В ПЕРЕДИ ВМЕСТО TO RIGHT ПОСТАВИЛ 0DEG. ОТЛИЧНО*/ 
   background-image: $bg-body/*linear-gradient(0deg, #353535, silver, white, white, white)*/;
   opacity:0; transition:.5s;/*добавляем для плавного переключения страниц*/
+  ransition: transform 1000000ms;//for scroll-bihavior пока не работает
+  croll-padding-top: 100px;
 }
 
 wrapper {

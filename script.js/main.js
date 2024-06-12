@@ -4,6 +4,8 @@ const menuClose = document.querySelector('.close');
 const menuNav = document.querySelector('.header-nav-desctop');//mobile
 //const bg = document.querySelector('body');*/
 
+//smoothScroll.init();
+
 //Добавление 4 -го юла при нажатии на три точки, код из чата. Расширение nav
 const menuBtn = document.querySelector('.burger');
 const menuClose = document.querySelector('.close');
