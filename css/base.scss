@@ -156,7 +156,8 @@ wrapper {
     gap: 0 200px;
     //transition: transform 500ms ease-in-out;
 }
-/*Плавное открытие .header-nav-desctop, когда добавляется четвёртый юл*/
+/*Плавное открытие .header-nav-desctop, когда добавляется четвёртый юл
+Версия с старого чата*/
 .animate__expand {
     animation-name: expand;
     animation-duration: 700ms;
@@ -173,15 +174,16 @@ wrapper {
   100% {
     transform: scaleX(1);
   }
-  /*0% {
+  0% {
     transform: scaleX(1);
   }
 
   100% {
     transform: scaleX(1);
-  }*/
+  }
 }
-
+/*
+//Пока не работает
 @keyframes close {
     0% {
       transform: scaleX(1);
@@ -190,13 +192,52 @@ wrapper {
     100% {
       transform: scaleX(0);
     }
-}
+}*/
 
 .animate__animated {
     animation-duration: 700ms;
     animation-fill-mode: both;
 }
 
+//ВЕРСИЯ С НОВОГО ЧАТА
+/* Основные стили для анимации *
+@keyframes expand {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  //Пока не работает
+  @keyframes close {
+    from {
+      transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(0);
+    }
+  }
+  
+  /* Применение анимаций к соответствующим классам *
+  .animate__expand {
+    animation: expand 0.5s forwards; /* Анимация расширения за 0.5 секунд *
+  }
+  
+  .animate__close {
+    animation: close 0.5s forwards; /* Анимация сужения за 0.5 секунд *
+  }
+  
+  /* Дополнительные стили *
+  .nav-desctop-list-four {
+    display: none; /* Скрываем список по умолчанию *
+    transform-origin: left; /* Указываем, что трансформация идет от левой стороны *
+  }
+  
+  .header-nav-desctop {
+    transform-origin: left; /* Указываем, что трансформация идет от левой стороны *
+  }*/
+///////////////////////////////////////////////////
 .close {
     display: none;
 }
@@ -2360,8 +2401,8 @@ wrapper {
     gap: 18px;
     z-index: 50;
     backdrop-filter: blur(5px);
-    overflow: auto;
-    height: 315px;
+    overflow: auto;// у нава появляется прокрутка
+    height: 315px;// уменьшаем высоту нава и он скролится Фрилансер по жизни. Адапт меню бургер https://www.youtube.com/watch?v=chJQofBSx94&list=PLVTUJUbFu7UeD0HL7zOgkoe7fu_n0chaA&index=22
     /* фильтр URL в SVG *
     backdrop-filter: url(common-filters.svg#filter);
     /* значения функции фильтра *

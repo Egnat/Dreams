@@ -37,8 +37,8 @@ menuBtn.addEventListener('click', () => {
 
     menuNav.classList.remove('animate__animated', 'animate__expand');
     menuNav.style.transform = 'scaleX(1)';
-    menuNav.classList.add('animate__animated', 'animate__close');// пока не але
-    menuNav.style.transform = 'scaleX(1)';//0 при нуле нав исчезает
+    //menuNav.classList.add('animate__animated', 'animate__close');// пока не але
+    //menuNav.style.transform = 'scaleX(0)';//0 при нуле плавно открывается только 4 блок
   }
   //alert('hi')
 });
