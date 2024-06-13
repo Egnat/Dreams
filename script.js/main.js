@@ -8,31 +8,40 @@ const menuNav = document.querySelector('.header-nav-desctop');//mobile
 
 //Добавление 4 -го юла при нажатии на три точки, код из чата. Расширение nav
 const menuBtn = document.querySelector('.burger');
-const menuClose = document.querySelector('.close');
-const menuNav = document.querySelector('.header-nav-desctop');
-const menuNavMob = document.querySelector('.header-nav-mobile');
 const listOpen = document.querySelector('.nav-desctop-list-four');
+//Для появления меню в моб версии
+const menuNavMob = document.querySelector('.header-nav-mobile');
+const menuClose = document.querySelector('.close');
+const menuNav = document.querySelector('.header-nav-desctop');/*этот я прописал
+, когда думал обойтись без header-nav-mobile*/
 //const bg = document.querySelector('body');
 
-//ОСНОВНОЙ РАБОЧИЙ
+//ОСНОВНОЙ РАБОЧИЙ Расширение nav-desctop
 let isOpen = false;
+
 menuBtn.addEventListener('click', () => {
   isOpen = !isOpen;
   if(isOpen) {
-    //listOpen.classList.toggle('open');
     listOpen.classList.toggle('nav-desctop-list-four-open');//можно toggle вместо add 
     listOpen.style.display = 'flex'; 
-    //listOpen.style.opacity = '1'; 
+
+    listOpen.classList.add('animate__animated', 'animate__fadeIn');
+
+    menuNav.classList.add('animate__animated', 'animate__expand'); 
+    menuNav.style.transform = 'scaleX(1)';//0 при нуле нав исчезает
   } else {  
-    //listOpen.classList.remove('open');
     listOpen.classList.remove('nav-desctop-list-four-open');
     listOpen.style.display = 'none';
-    //listOpen.style.opacity = '0'; 
+
+    listOpen.classList.remove('animate__animated', 'animate__fadeIn');
+
+    menuNav.classList.remove('animate__animated', 'animate__expand');
+    menuNav.style.transform = 'scaleX(1)';
+    menuNav.classList.add('animate__animated', 'animate__close');// пока не але
+    menuNav.style.transform = 'scaleX(1)';//0 при нуле нав исчезает
   }
   //alert('hi')
 });
-
-//listOpen.classList.add('animate__animated', 'animate__fadeIn');
 
 //Появление и исчезновение header-nav-mobile
 menuBtn.addEventListener('click', () => {

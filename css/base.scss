@@ -156,6 +156,46 @@ wrapper {
     gap: 0 200px;
     //transition: transform 500ms ease-in-out;
 }
+/*Плавное открытие .header-nav-desctop, когда добавляется четвёртый юл*/
+.animate__expand {
+    animation-name: expand;
+    animation-duration: 700ms;
+    animation-timing-function: ease-in-out;
+    }
+    
+@keyframes expand {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);//1.05
+  }
+  100% {
+    transform: scaleX(1);
+  }
+  /*0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }*/
+}
+
+@keyframes close {
+    0% {
+      transform: scaleX(1);
+    }
+  
+    100% {
+      transform: scaleX(0);
+    }
+}
+
+.animate__animated {
+    animation-duration: 700ms;
+    animation-fill-mode: both;
+}
 
 .close {
     display: none;
@@ -214,12 +254,31 @@ wrapper {
 
 .nav-desctop-list-four {
    display: none;
-   transition: all 500ms ease-out;
+   transition: opacity 500ms ease-out;
+   pacity: 0;
 }
 
-.listOpen {
-    transition: all 500ms ease-out; 
-}
+/* Animate.css для плавного появления .nav-desctop-list-four*/
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
 
 .list-item {
    margin-bottom: 18p;

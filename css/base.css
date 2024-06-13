@@ -162,6 +162,70 @@ wrapper {
           align-items: flex-start;
   gap: 0 200px; }
 
+/*Плавное открытие .header-nav-desctop, когда добавляется четвёртый юл*/
+.animate__expand {
+  -webkit-animation-name: expand;
+          animation-name: expand;
+  -webkit-animation-duration: 700ms;
+          animation-duration: 700ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out; }
+
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0); }
+  50% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  /*0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }*/ }
+
+@keyframes expand {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0); }
+  50% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  /*0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }*/ }
+@-webkit-keyframes close {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0); } }
+@keyframes close {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0); } }
+.animate__animated {
+  -webkit-animation-duration: 700ms;
+          animation-duration: 700ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
 .close {
   display: none; }
 
@@ -227,12 +291,33 @@ wrapper {
 
 .nav-desctop-list-four {
   display: none;
-  -webkit-transition: all 500ms ease-out;
-  transition: all 500ms ease-out; }
+  -webkit-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+  pacity: 0; }
 
-.listOpen {
-  -webkit-transition: all 500ms ease-out;
-  transition: all 500ms ease-out; }
+/* Animate.css для плавного появления .nav-desctop-list-four*/
+.animate__fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.animate__animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .list-item {
   margin-bottom: 18p;
