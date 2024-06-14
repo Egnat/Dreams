@@ -182,8 +182,8 @@ wrapper {
     transform: scaleX(1);
   }
 }
-/*
-//Пока не работает
+
+//Пока не работает/**/
 @keyframes close {
     0% {
       transform: scaleX(1);
@@ -192,7 +192,7 @@ wrapper {
     100% {
       transform: scaleX(0);
     }
-}*/
+}
 
 .animate__animated {
     animation-duration: 700ms;
@@ -300,7 +300,6 @@ wrapper {
 }
 
 /* Animate.css для плавного появления .nav-desctop-list-four*/
-
 .animate__fadeIn {
     animation-name: fadeIn;
     animation-duration: 1s;
@@ -1956,7 +1955,8 @@ wrapper {
             background-color: transparent;
             color: #000000;
             border: 1px solid rgb(0, 0, 0);
-            box-shadow: 3px 3px 7px 0px #000;
+            box-shadow:7px 11px 22px #c7c7c7;
+            ox-shadow: 3px 3px 7px 0px #000;
             transition: 
               box-shadow 500ms ease-in-out,
               background-color 500ms ease-in-out,
@@ -2127,7 +2127,7 @@ wrapper {
     gap: 18px;
     z-index: 50;
     backdrop-filter: blur(5px);
-    overflow: auto;
+    overflow: auto;/*скролл нава*/
     height: 315px;
     /* фильтр URL в SVG *
     backdrop-filter: url(common-filters.svg#filter);
@@ -2502,7 +2502,7 @@ wrapper {
         gap: 18px;
         z-index: 50;
         backdrop-filter: blur(5px);
-        overflow: auto;
+        overflow: auto;/*скролл нава*/
         height: 315px;
         /* фильтр URL в SVG *
         backdrop-filter: url(common-filters.svg#filter);
@@ -2552,7 +2552,7 @@ wrapper {
     gap: 18px;
     z-index: 50;
     backdrop-filter: blur(5px);
-    overflow: auto;
+    overflow: auto;/*скролл нава*/
     height: 315px;
     /* фильтр URL в SVG *
     backdrop-filter: url(common-filters.svg#filter);
@@ -2617,7 +2617,7 @@ wrapper {
     gap: 18px;
     z-index: 50;
     backdrop-filter: blur(5px);
-    overflow: auto;
+    overflow: auto;/*скролл нава*/
     height: 315px;
     /* фильтр URL в SVG *
     backdrop-filter: url(common-filters.svg#filter);

@@ -24,19 +24,19 @@ menuBtn.addEventListener('click', () => {
   if(isOpen) {
     listOpen.classList.toggle('nav-desctop-list-four-open');//можно toggle вместо add 
     listOpen.style.display = 'flex'; 
-
     listOpen.classList.add('animate__animated', 'animate__fadeIn');
-
+    //Плавное раскрытие nav-desctop
     menuNav.classList.add('animate__animated', 'animate__expand'); 
     menuNav.style.transform = 'scaleX(1)';//0 при нуле нав исчезает
+    menuNav.style.transition = '500ms ease-in-out';// пока не але
   } else {  
     listOpen.classList.remove('nav-desctop-list-four-open');
     listOpen.style.display = 'none';
-
     listOpen.classList.remove('animate__animated', 'animate__fadeIn');
-
-    menuNav.classList.remove('animate__animated', 'animate__expand');
-    menuNav.style.transform = 'scaleX(1)';
+    //Плавное закрытие nav-desctop
+    menuNav.classList.remove('animate__animated', 'animate__expand');// пока не але
+    menuNav.style.transform = 'scaleX(1)';// пока не але
+    menuNav.style.transition = '500ms ease-in-out';// пока не але
     //menuNav.classList.add('animate__animated', 'animate__close');// пока не але
     //menuNav.style.transform = 'scaleX(0)';//0 при нуле плавно открывается только 4 блок
   }

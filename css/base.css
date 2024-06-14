@@ -162,7 +162,8 @@ wrapper {
           align-items: flex-start;
   gap: 0 200px; }
 
-/*Плавное открытие .header-nav-desctop, когда добавляется четвёртый юл*/
+/*Плавное открытие .header-nav-desctop, когда добавляется четвёртый юл
+Версия с старого чата*/
 .animate__expand {
   -webkit-animation-name: expand;
           animation-name: expand;
@@ -181,13 +182,12 @@ wrapper {
   100% {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
-  /*0% {
-    transform: scaleX(1);
-  }
-
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
   100% {
-    transform: scaleX(1);
-  }*/ }
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); } }
 
 @keyframes expand {
   0% {
@@ -199,13 +199,12 @@ wrapper {
   100% {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
-  /*0% {
-    transform: scaleX(1);
-  }
-
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
   100% {
-    transform: scaleX(1);
-  }*/ }
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); } }
 @-webkit-keyframes close {
   0% {
     -webkit-transform: scaleX(1);
@@ -226,6 +225,43 @@ wrapper {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
+/* Основные стили для анимации *
+@keyframes expand {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  //Пока не работает
+  @keyframes close {
+    from {
+      transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(0);
+    }
+  }
+  
+  /* Применение анимаций к соответствующим классам *
+  .animate__expand {
+    animation: expand 0.5s forwards; /* Анимация расширения за 0.5 секунд *
+  }
+  
+  .animate__close {
+    animation: close 0.5s forwards; /* Анимация сужения за 0.5 секунд *
+  }
+  
+  /* Дополнительные стили *
+  .nav-desctop-list-four {
+    display: none; /* Скрываем список по умолчанию *
+    transform-origin: left; /* Указываем, что трансформация идет от левой стороны *
+  }
+  
+  .header-nav-desctop {
+    transform-origin: left; /* Указываем, что трансформация идет от левой стороны *
+  }*/
 .close {
   display: none; }
 
@@ -2247,8 +2283,9 @@ wrapper {
       background-color: transparent;
       color: #000000;
       border: 1px solid black;
-      -webkit-box-shadow: 3px 3px 7px 0px #000;
-              box-shadow: 3px 3px 7px 0px #000;
+      -webkit-box-shadow: 7px 11px 22px #c7c7c7;
+              box-shadow: 7px 11px 22px #c7c7c7;
+      ox-shadow: 3px 3px 7px 0px #000;
       -webkit-transition: background-color 500ms ease-in-out, color 500ms ease-in-out,  border 300ms ease-in-out, -webkit-box-shadow 500ms ease-in-out;
       transition: background-color 500ms ease-in-out, color 500ms ease-in-out,  border 300ms ease-in-out, -webkit-box-shadow 500ms ease-in-out;
       transition: box-shadow 500ms ease-in-out, background-color 500ms ease-in-out, color 500ms ease-in-out,  border 300ms ease-in-out;
@@ -2391,6 +2428,7 @@ wrapper {
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
     overflow: auto;
+    /*скролл нава*/
     height: 315px;
     /* фильтр URL в SVG *
     backdrop-filter: url(common-filters.svg#filter);
@@ -2785,6 +2823,7 @@ wrapper {
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
     overflow: auto;
+    /*скролл нава*/
     height: 315px;
     /* фильтр URL в SVG *
     backdrop-filter: url(common-filters.svg#filter);
@@ -2845,6 +2884,7 @@ wrapper {
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
     overflow: auto;
+    /*скролл нава*/
     height: 315px;
     /* фильтр URL в SVG *
     backdrop-filter: url(common-filters.svg#filter);
@@ -2914,6 +2954,7 @@ wrapper {
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
     overflow: auto;
+    /*скролл нава*/
     height: 315px;
     /* фильтр URL в SVG *
     backdrop-filter: url(common-filters.svg#filter);
