@@ -93,6 +93,10 @@ body {
   -webkit-transition: .5s;
   transition: .5s;
   /*добавляем для плавного переключения страниц*/
+  /*Двигающийся линар. Класс
+  background: linear-gradient(245deg, #64b5f6, #81c784, #ffeb3b, #ff8a65);/*245deg,*
+    background-size: 400% 400%;
+    animation: gradientAnimation 7s ease infinite;*/
   ransition: transform 1000000ms;
   croll-padding-top: 100px; }
 
@@ -2267,7 +2271,8 @@ wrapper {
           align-items: flex-start;
   gap: 40px; }
   .common-button > .btn {
-    width: 166px;
+    width: 138px;
+    /*166px*/
     height: 27px;
     background-color: #000000;
     font-size: 16px;
